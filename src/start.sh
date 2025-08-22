@@ -7,7 +7,7 @@ export LD_PRELOAD="${TCMALLOC}"
 set -eo pipefail
 set +u
 
-if [[ "${IS_DEV,,}" =~ ^(true|1|t|yes)$ ]]; then
+if [[ "${IS_DEV,,}" =~ ^(true|1|t|yes)$ ]] || [[ "${is_dev,,}" =~ ^(true|1|t|yes)$ ]]; then
     API_URL="https://comfyui-job-api-dev.fly.dev"  # Replace with your development API URL
     echo "Using development API endpoint"
 else
